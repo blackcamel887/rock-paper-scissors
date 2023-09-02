@@ -1,23 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Choices from './Choices';
+import Score from './Score';
+import { useState } from "react";
 function App() {
+  let [userScore,setUserScore] = useState(0);//the state for user's score
+  let [botScore,setBotScore] = useState(0);//the state for bot's score
+  let [gameState,setGameState] = useState('default');//the state for the state of the game, initallized as the default state
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className = 'Top-half'>
+        <Score region='top-score' name = 'Player' score={userScore} ></Score>
+        <Choices state = {gameState}></Choices>
+      </div>
+
+      <div className = 'Bottom-half' >
+        <Score region='bottom-score' name = 'Bot' score={botScore}></Score>
+        <Choices state = {gameState}></Choices>
+      </div>
     </div>
   );
 }

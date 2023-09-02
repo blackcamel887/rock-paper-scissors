@@ -1,7 +1,63 @@
 .App {
   text-align: center;
 }
+/*
+  The top half of the screen
+*/
+.Top-half{
+  height: 50vh;
+  width: 100vw;
+  background-color: #8112c5;
+  position: relative;
+}
+/*
+  The bottom half of the screen
+*/
+.Bottom-half{
+  height: 50vh;
+  width: 100vw;
+  background-color: #ffdc83;
+  position: relative;
 
+}
+/*
+  The choices options for rock paper and scissors
+*/
+.choices{
+  display: inline;
+  position:absolute;
+  top:10%;
+  right:3%;
+  width: 70%;
+  height:80%;
+  background-color: #61dafb;
+}
+/*
+  The score component
+*/
+.Score{
+  width:10%;
+  height:20%;
+  display: inline;
+}
+.Score h1{
+  position: absolute;
+  left: 3%;
+}
+/*
+  the score component in the top half of the screen
+*/
+.top-score h1{
+  top:70%;
+  color: #ffdc83;
+}
+/*
+  the score component in the bottom half of the screen
+*/
+.bottom-score h1{
+  top:5%;
+  color: #8112c5;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -27,7 +83,15 @@
 .App-link {
   color: #61dafb;
 }
+img{
+  width:27%;
+  height:90%;
+  margin-left:2.5%;
+  margin-right: 2.5%;
+  border:solid 2px darkblue;
+  margin-top: 1%;
 
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
